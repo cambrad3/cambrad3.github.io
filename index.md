@@ -177,7 +177,7 @@ The below chart compares various techniques in linear regression. We have used R
 To further improve the model, we have trained a RandomForest Regressor with hyperparameter tuning using k-fold cross validation technique. Below chart shows the important features in the Random Forest model. 
 <img src= "https://www.dropbox.com/s/nnsljl3f69p0koi/Screen%20Shot%202019-11-11%20at%2010.14.10%20PM.png?raw=1">
 
-We have also trained boosting algorithms, the gradient boosting regressor gives the best results out of all the models. Below chart compares various models. 
+We have also trained boosting algorithms, the random forest regressor gives the best results out of all the models. Below chart compares various models. 
 
  
  
