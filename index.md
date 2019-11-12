@@ -218,5 +218,7 @@ Sung or Nazanin or Kevin or Kalyan
 #### Distribution of work
 - Data scrapping and cleaning: Cameron Bradley
 - Unsupervised feature engineering: Cameron Bradley
+- Supervised feature engineering : Kalyan Murahari
+- Linear Regression and Regularization : Kalyan Murahari
 - Kmeans and GMM: Cameron Bradley
 - GitHub page contributer: Cameron Bradley
