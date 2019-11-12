@@ -124,15 +124,13 @@ We can see that the distribution of win shares is skewed to the right. This make
 Furthermore, by comparing the 2 charts, we realize that the range of career winshares is lot bigger than the rooki winshares. This makes sense since the career winshare values are created by adding the winshares of a player during their career. This observation resulted in our approach to take into consideration the “duration” of career, while calculating winshares. 
 
 
-kalyan's stuff:
-The correlation matrix is shown below. By analyzing it, we picked the features that correlated the most to the winshares.
-->correlation matrix goes here
+We have calculated the correlation of all the attributes with the WinShares. This plot shows the attributes that are highly correlated with the WinShares.
 <img src="https://www.dropbox.com/s/reiwgr5vha7i6af/Screen%20Shot%202019-11-11%20at%209.02.13%20PM.png?raw=1">
 The selected features were used by different models. we performed linear regression on the selected features.
-->linear regression
 
-we performed SVR on the selected features.
-->
+
+Win_Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
+
 
 Kevin's stuff:
 We did regression analysis and picked the features with statistically significant p-values at an alpha level of .05.
@@ -152,12 +150,25 @@ Nazanin, Kevin, Kalyan
 The RMSE, R-squared and Mean Absolute Error values were used to compare the performance of different models.
 ->RMSE and R-squared comparison goes here
 
-After analysis and comparison between different models, we picked the best model for further analysis on players. In this approach We picked 10 players and predicted their corresponding career winshares, using their rookie features for the selected model. Furthermore, we used these predicted winshares, and predicted which player in our current dataset they will most likely have the closest winshares to, in their future career.-> I need to revise this sentence.
+Our experiments include regularizing linear regression algorithm with ridge(l2), lasso (l1) and elastic net techniques. 
+Any sports data will have extreme stats. To handle such outliers in the player stats we have also experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
+
+The below chart compares various techniques in linear regression. We have used RMSE, MAE for evaluating the models. 
 
 <img src='https://www.dropbox.com/s/1gwmtls6d14v8qq/Screen%20Shot%202019-11-11%20at%2010.49.46%20PM.png?raw=1'>
 
-->10 players comparison table will go here.
+To further improve the model, we have trained a RandomForest Regressor with hyperparameter tuning using k-fold cross validation technique. Below chart shows the important features in the Random Forest model. 
 <img src= "https://www.dropbox.com/s/nnsljl3f69p0koi/Screen%20Shot%202019-11-11%20at%2010.14.10%20PM.png?raw=1">
+
+We have also trained boosting algorithms, the gradient boosting regressor gives the best results out of all the models. Below chart compares various models. 
+
+
+After analysis and comparison between different models, we picked the best model for further analysis on players. In this approach We picked 10 players and predicted their corresponding career winshares, using their rookie features for the selected model. Furthermore, we used these predicted winshares, and predicted which player in our current dataset they will most likely have the closest winshares to, in their future career.-> I need to revise this sentence.
+
+
+
+->10 players comparison table will go here.
+
 
 Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career Winshares were predicted using linear regression (should I say lin reg?). Then their prediction was matched with a career winshare of players who have played 10 or more years in the NBA. If there were multiple matches, I picked player in roughly the same position (i.e. guard to guard). For Ben Simmons, I put both Kevin Love and Amare Stoudemire as I believed it was interesting to see two "big mans" that Ben Simmons can potentially become.
 
