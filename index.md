@@ -153,7 +153,7 @@ Next, we looked at career win shares:
 
 We can see that the distribution of win shares is skewed to the right. This makes sense since The very good NBA players have very high win shares. For example, the win shares leader of our data set is Karl Malone, with 234 win shares. So, it’s an elite status to have a high win shares.
 
-Furthermore, by comparing the 2 charts, we realize that the range of career winshares is lot bigger than the rooki winshares. This makes sense since the career winshare values are created by adding the winshares of a player during their career. This observation resulted in our approach to take into consideration the “duration” of career, while calculating winshares. 
+Furthermore, by comparing the 2 charts, we realize that the range of career winshares is lot bigger than the rookie winshares. This makes sense since the career winshare values are created by adding the winshares of a player during their career. This observation resulted in our approach to take into consideration the “duration” of career, while calculating winshares. 
 
 We have calculated the correlation of all the attributes with the WinShares. This plot shows the attributes that are highly correlated with the WinShares.
 
