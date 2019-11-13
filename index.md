@@ -239,7 +239,7 @@ For unsupervised learning, hierarhical clustering provides the best performance.
 #### Distribution of work
 - Data scrapping and cleaning: Cameron Bradley
 - Unsupervised feature engineering: Cameron Bradley
-- Supervised feature engineering: Kalyan Murahari, Kevin Cho
+- Supervised feature engineering: Kalyan Murahari
 - Linear Regression and Regularization: Kalyan Murahari, Kevin Cho
 - Exploratory Data Analysis: Nazanin Tabatabaei, Kalyan Murahari, Kevin Cho
 - LDA for Different models:Nazanin Tabatabaei
