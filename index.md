@@ -110,7 +110,7 @@ This plot shows that Trae Young (who ironically the Atlanta Hawks traded for by 
 
 #### DBSCAN
 
-Unlike other clustering algorithms, DBSCAN does not require to specify the number of clusters a priori. The number of groups depends on two parameters: epsilon (the distance from a given point) and min points (the minimum number of points within epsilon to be considered a cluster). After adjusting the values of epsilon and min points, six clusters were identified. The white labels show players who were closest to the center of their clusters. The black dots represent players who are regarded as outliers (indicated as cluster -1). For example, data points in the upper right corner are spread out or not dense enough to be clustered. There are many exceptional players who are located in this region of the graph. 
+Unlike other clustering algorithms, DBSCAN does not require to specify the number of clusters a priori. The number of groups depends on two parameters: epsilon (the distance from a given point) and min points (the minimum number of points within epsilon to be considered a cluster). After adjusting the values of epsilon and min points, six clusters were identified. The white labels show players who were closest to the center of their clusters. The black dots represent players who are regarded as outliers (indicated as cluster -1). For example, data points in the upper right corner are spread out or are not dense enough to be clustered. There are many exceptional players who are located in this region of the graph. 
 
 If Trae Young plays 10+ seasons, he could fall under Cluster 1 (yellow), Cluster 5 (red), or become a noise point. 
 
