@@ -170,6 +170,7 @@ Our experiments include regularizing linear regression algorithm with ridge(l2),
 Any sports data will have extreme stats. To handle such outliers in the player stats we have also experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
 
 The below chart compares various techniques in linear regression. We have used RMSE, MAE, R_squared for evaluating the models. 
+
 <img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1" width="500">
 
 
