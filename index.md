@@ -234,12 +234,12 @@ For supervised learning, three models that were explored, linear regression, ran
 - Data scrapping and cleaning: Cameron Bradley
 - Unsupervised feature engineering: Cameron Bradley
 - Supervised feature engineering: Kalyan Murahari
-- Linear Regression and Regularization: Kalyan Murahari, Kevin Cho
-- Exploratory Data Analysis: Nazanin Tabatabaei, Kalyan Murahari, Kevin Cho
-- LDA for Different models:Nazanin Tabatabaei
-- Rookie Prediction Match: Kevin Cho
+- Linear regression and regularization: Kalyan Murahari, Kevin Cho
+- Exploratory data analysis: Nazanin Tabatabaei, Kalyan Murahari, Kevin Cho
+- LDA for supervised models:Nazanin Tabatabaei
+- Rookie prediction match: Kevin Cho
 - Kmeans and GMM: Cameron Bradley
 - DBSCAN and Hierarchical: Sungeun An
-- Clustering Evaluations: Sungeun An
+- Clustering evaluations: Sungeun An
 - GitHub page contributer: Cameron Bradley, Sungeun An, Nazanin Tabatabaei, Kevin Cho, Kalyan Murahari
 - GitHub page editor: Cameron Bradley
