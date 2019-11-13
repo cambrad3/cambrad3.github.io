@@ -159,17 +159,7 @@ We have calculated the correlation of all the attributes with the career win sha
 
 <img src="https://www.dropbox.com/s/reiwgr5vha7i6af/Screen%20Shot%202019-11-11%20at%209.02.13%20PM.png?raw=1">
 
-#### Model Training with LDA components
-
-In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
-
-<img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
-
-#### Evaluation of approach
-
-The RMSE, R-squared, and Mean Absolute Error values were used to compare the performance of different models.
-
-### Results and insights
+### Modeling and Insights
 
 #### Model Training with LDA components
 
