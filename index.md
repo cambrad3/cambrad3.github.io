@@ -102,9 +102,9 @@ This plot shows that Trae Young (who ironically the Atlanta Hawks traded for by 
 
 DBSCAN algorithm resulted in six clusterings, as shown below with center players, and many players were regarded as noises. Unlike other clustering algorithms, DBSCAN does not require to specify the number of clusters a priori. The number of groups depends on the value of eps and minpts. After adjusting the values of eps and minpts, six clusters were identified; increasing eps and minpts resulted in one big group while considering other points as noise. DBSCAN can also identify points that are not part of any cluster, which is very useful for detecting outliers (indicated as cluster -1). For example, data points in the upper right corner are spread and not dense enough to be clustered. Some exceptional players who are unique may not belong to any clusters. 
 
-If Trae Young plays 10+ seasons, he would be located in a region where there is currently in noise points. This is where players with great rookie season and careers lie. 
+If Trae Young plays 10+ seasons, he would fall under Cluster 1 (yellow) or Cluster 5 (red), or he would be located in a region where there is currently in noise points. This is where players with great rookie season and careers lie. 
 
-<img src="https://www.dropbox.com/s/313hqrly9ga6wet/dbscan_names.png?raw=1">
+<img src="https://www.dropbox.com/s/n8upzu2t7az06lf/dbscan_revised.png?raw=1">
 
 #### Hierarchical
 
@@ -114,9 +114,9 @@ In hierarchical clustering, the dendrogram was used to find the optimal number o
 
 Below is the hierarchical clustering results. The most noticeable difference between K-means and GMM results is Cluster 2 (indicated as green color). While K-means and GMM separated Cluster 2 as two or more groups, hierarchical clustering clustered them as one group, which is similar to our pre-existing categorization of seasoned players. 
 
-<img src="https://www.dropbox.com/s/1p2krfmkes5s629/hierarhical%20%28names%29.png?raw=1">
+<img src="https://www.dropbox.com/s/q84eajgf564u931/hierarhical_revised.png?raw=1">
 
-Trae Young can potentially belong to four different groups: Cluster 0 (blue), Cluster 1 (yellow), Cluster 4 (orange), and Cluster 5 (red). Young will most likely belong to Cluster 0 or Cluster 1. 
+Trae Young can potentially belong to three different groups: Cluster 0 (blue), Cluster 1 (yellow) and Cluster 2 (green). Young will most likely belong to Cluster 0 or Cluster 1. 
 
 #### Evaluation of clustering methods
 
