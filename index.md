@@ -130,7 +130,7 @@ Trae Young can potentially belong to three different groups: Cluster 0 (blue), C
 
 #### Evaluation of clustering methods
 
-Lastly, considering we created 6 clustering groups explicitly for seasoned players, we can measure performance using adjusted_rand_score. This is not frequent since in real cases we don’t have cluster labels or ground truth to begin with (thus our need to apply clustering techniques). Since in this case we do have labels, we can measure performance. 
+Since we know the 6 labels of our seasoned players, we evaluted our clustering using Adjusted Rand Score. The score values for each clustering technique are the following:
 
 - K-means:0.29
 - GMM:0.34
