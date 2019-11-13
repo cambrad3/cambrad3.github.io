@@ -135,10 +135,12 @@ While the ARI score does not determine the best clustering algorithm, it gives t
 Nazanin, Kevin, Kalyan
 
 •	What does the distribution of rookie winshares look like?
+
 Before further discussing the project, we used basic EDA to see what our data can tell us. First, I took a quick look at the distribution of rookie win shares:
 <img src="https://www.dropbox.com/s/t9rrhl1en6c98aw/rookie.PNG?raw=1">
 
 •	What does the distribution of Career winshares look like?
+
 Again, we used basic EDA to see what our data can tell us:
 <img src="https://www.dropbox.com/s/i2y8u7ndwolg919/carrer.PNG?raw=1">
 
@@ -164,6 +166,11 @@ performing X model on the selected features resulted in...
 ->
 
 results of regression ridge, lasso->
+
+### Model Training with LDA components
+In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
+
+<img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
 #### Evaluation of approach
 Nazanin, Kevin, Kalyan
@@ -242,7 +249,9 @@ Sung or Nazanin or Kevin or Kalyan
 - Unsupervised feature engineering: Cameron Bradley
 - Supervised feature engineering : Kalyan Murahari
 - Linear Regression and Regularization : Kalyan Murahari
+- Exploratory Data Analysis:Nazanin Tabatabaei
+- Using LDA for Different models such as Linear,ridge,lasso,elasticNet and huber regression:Nazanin Tabatabaei
 - Kmeans and GMM: Cameron Bradley
 - DBSCAN and Hierarchical: Sungeun An
 - Clustering Evaluations: Sungeun An
-- GitHub page contributer: Cameron Bradley, Sungeun An
+- GitHub page contributer: Cameron Bradley, Sungeun An, Nazanin Tabatabaei
