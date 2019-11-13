@@ -126,7 +126,7 @@ Below is the hierarchical clustering results. The most noticeable difference bet
 
 <img src="https://www.dropbox.com/s/q84eajgf564u931/hierarhical_revised.png?raw=1">
 
-Trae Young can potentially belong to three different groups: Cluster 0 (blue), Cluster 1 (yellow) and Cluster 2 (green). Young will most likely belong to Cluster 0 or Cluster 1.
+Trae Young can potentially belong to three different groups: Cluster 0 (blue), Cluster 1 (yellow) and Cluster 2 (green). Young will most likely belong to Cluster 1.
 
 #### Evaluation of clustering methods
 
