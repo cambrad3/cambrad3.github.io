@@ -191,18 +191,18 @@ Our experiments include regularizing linear regression algorithm with ridge(l2),
 Any sports data will have extreme stats. To handle such outliers in the player stats we have also experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
 
 The below chart compares various techniques in linear regression. We have used RMSE, MAE for evaluating the models. 
-<img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1">
+<img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1" width="200">
 
 
 
 To further improve the model, we have trained a RandomForest Regressor with hyperparameter tuning using k-fold cross validation technique. Below chart shows the important features in the Random Forest model. 
-<img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1">
+<img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1" width="200">
 
 We have also trained boosting algorithms, the gradient boosted tree regressor gives the best results out of all the models. Below chart compares various models. 
 
  
  
- <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1">
+ <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="200">
 Nazanin, Kevin, Kalyan
 
 ### Conclusion
