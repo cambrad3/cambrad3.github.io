@@ -20,7 +20,7 @@ Source: https://www.basketball-reference.com/
 - Features include information about player efficiency rating, true shooting percentage, 3 point attempt rate, free throw attempt rate, rebound percentage, block percentage, assist percentage, steal percentage, etc. (see Appendix - Glossary of Features) 
 
 ### What is Our Approach?
-The approach was 2 fold...
+The approach was 2 fold as below.
 
 #### Unsupervised
 We used clustering analysis to find groups of seasoned players (10+ years in the NBA) to which to compare rookie players. To do this we found 2 new features, using Linear Discriminant Analysis (LDA), that reduced the dimensions of the rookie and career features into single metrics. These new features were correlated with rookie and career win shares, and used for clustering analysis.
@@ -155,27 +155,12 @@ We have calculated the correlation of all the attributes with the WinShares. Thi
 The selected features were used by different models. we performed linear regression on the selected features.
 
 
-
-
-Kevin's stuff:
-We did regression analysis and picked the features with statistically significant p-values at an alpha level of .05.
-->show p.value stuff
-
-The selected features were used by various models. Performing linear regression on the selected features resulted in ...
-->
-
-performing X model on the selected features resulted in...
-->
-
-results of regression ridge, lasso->
-
 ###### Model Training with LDA components
 In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
 #### Evaluation of approach
-Nazanin, Kevin, Kalyan
 
 The RMSE, R-squared and Mean Absolute Error values were used to compare the performance of different models.
 
@@ -201,12 +186,10 @@ To further improve the model, we have trained a RandomForest Regressor with hype
 We have also trained boosting algorithms, the gradient boosted tree regressor gives the best results out of all the models. Below chart compares various models. 
 
  
- 
  <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="500">
-Nazanin, Kevin, Kalyan
 
 ### Conclusion
-For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest, and gradient boosting, all provide similar performance. The top three important features, in order of importance, are rookie career winshare followed by rookie offensive box plus minus and rookie age.
+For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest, and gradient boosting, all provide similar performance. The top three important features from linear regression are rookie career winshare followed by rookie offensive box plus minus and rookie age.
 
 ### Appendix
 #### Glossary of features
