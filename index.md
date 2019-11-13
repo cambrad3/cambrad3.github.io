@@ -106,7 +106,7 @@ GMM is a soft classifier, where every point has a probability of being included 
 
 The clustering results appear similar to Kmeans, however, some of the players located closest to their cluster means are on the periphery of the soft assignments.
 
-This plot shows that Trae Young (who ironically the Atlanta Hawks traded for by trading away Luka) will most likely be in the green cluster with Brook Lopez. However, there is a chance he could also end up in the black or red clusters.
+This plot shows that **Trae Young** (who ironically the Atlanta Hawks traded for by trading away Luka) **will most likely be in the green cluster with Brook Lopez**. However, there is a chance he could also end up in the black or red clusters.
 
 #### DBSCAN
 
@@ -151,11 +151,11 @@ Next, we looked at career win shares:
 
 <img src="https://www.dropbox.com/s/i2y8u7ndwolg919/carrer.PNG?raw=1">
 
-We can see that the distribution of win shares is skewed to the right. This makes sense since The very good NBA players have very high win shares. For example, the win shares leader of our data set is Karl Malone, with 234 win shares. So, it’s an elite status to have a high win shares.
+We can see that the distribution of win shares is skewed to the right. This makes sense since The very good NBA players have very high win shares. For example, the win shares leader of our data set is **Karl Malone**, with 234 win shares. So, it’s an elite status to have a high win shares.
 
-Furthermore, by comparing the 2 charts, we realize that the range of career winshares is lot bigger than the rookie winshares. This makes sense since the career winshare values are created by adding the winshares of a player during their career. This observation resulted in our approach to take into consideration the “duration” of career, while calculating winshares. 
+Furthermore, by comparing the 2 charts, we realize that the range of career win shares is lot bigger than the rookie win shares. This makes sense since the career win share values are created by adding the win shares of a player during their career. This observation resulted in our approach to take into consideration the “duration” of career, while calculating winshares. 
 
-We have calculated the correlation of all the attributes with the WinShares. This plot shows the attributes that are highly correlated with the WinShares.
+We have calculated the correlation of all the attributes with the career win shares. This plot shows the attributes that are highly correlated with this metric.
 
 <img src="https://www.dropbox.com/s/reiwgr5vha7i6af/Screen%20Shot%202019-11-11%20at%209.02.13%20PM.png?raw=1">
 
