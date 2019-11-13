@@ -169,8 +169,8 @@ performing X model on the selected features resulted in...
 
 results of regression ridge, lasso->
 
-##### Model Training with LDA components
-In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
+###### Model Training with LDA components
+In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
