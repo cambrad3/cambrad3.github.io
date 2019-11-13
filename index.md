@@ -185,24 +185,24 @@ Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, inc
 #### Results and insights
 
 Win_Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
-<img src='https://www.dropbox.com/s/xap7znyujl70hny/Screen%20Shot%202019-11-13%20at%202.33.38%20PM.png?raw=1'>
+<img src='https://www.dropbox.com/s/xap7znyujl70hny/Screen%20Shot%202019-11-13%20at%202.33.38%20PM.png?raw=1' width="500">
 
 Our experiments include regularizing linear regression algorithm with ridge(l2), lasso (l1) and elastic net techniques. 
 Any sports data will have extreme stats. To handle such outliers in the player stats we have also experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
 
 The below chart compares various techniques in linear regression. We have used RMSE, MAE for evaluating the models. 
-<img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1" width="200">
+<img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1" width="500">
 
 
 
 To further improve the model, we have trained a RandomForest Regressor with hyperparameter tuning using k-fold cross validation technique. Below chart shows the important features in the Random Forest model. 
-<img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1" width="200">
+<img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1" width="500">
 
 We have also trained boosting algorithms, the gradient boosted tree regressor gives the best results out of all the models. Below chart compares various models. 
 
  
  
- <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="200">
+ <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="500">
 Nazanin, Kevin, Kalyan
 
 ### Conclusion
