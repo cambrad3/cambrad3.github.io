@@ -59,15 +59,25 @@ GMM is a soft classifier, where every point has a probability of being included 
 The clustering results appear similar to Kmeans, however, some of the players located closest to their cluster means are on the periphery of the soft assignments.
 This plot shows that Trae Young (who ironically the Atlanta Hawks traded for by trading away Luka) will most likely be in the green cluster with Brook Lopez. However, there is a chance he could also end up in the black or red clusters.
 #### DBSCAN
-DBSCAN algorithm resulted in six clusterings, as shown below with center players, and many players were regarded as noises. Unlike other clustering algorithms, DBSCAN does not require to specify the number of clusters a priori. The number of groups depends on the value of eps and minpts. After adjusting the values of eps and minpts, six clusters were identified; increasing eps and minpts resulted in one big group while considering other points as noise. DBSCAN can also identify points that are not part of any cluster, which is very useful for detecting outliers (indicated as cluster -1). For example, data points in the upper right corner are spread and not dense enough to be clustered. Some exceptional players who are unique may not belong to any clusters. 
-If Trae Young plays 10+ seasons, he would fall under Cluster 1 (yellow) or Cluster 5 (red), or he would be located in a region where there is currently in noise points. This is where players with great rookie season and careers lie. 
+
+Unlike other clustering algorithms, DBSCAN does not require to specify the number of clusters a priori. The number of groups depends on the value of eps and minpts. After adjusting the values of eps and minpts, six clusters were identified. The white labels show players who were closest to the center of their clusters. The black dots represent players who are regarded as outliers (indicated as cluster -1). For example, data points in the upper right corner are spread out and are not dense enough to be clustered. There are many exceptional players who are located in this region of the graph. 
+
+If Trae Young plays 10+ seasons, he could fall under Cluster 1 (yellow), Cluster 5 (red), or become a noise point. 
+
 <img src="https://www.dropbox.com/s/n8upzu2t7az06lf/dbscan_revised.png?raw=1">
+
 #### Hierarchical
-In hierarchical clustering, the dendrogram was used to find the optimal number of clusters. Below is the dendrogram diagram. The x-axis consists of the players and y-axis consists of the Euclidean distance between the clusters.  While there are many distance measuring methods (e.g. single, complete, average, ward, etc.), we used average method to best match our pre-existing classes (see evaluation section for more details). As the dashed line indicates, we cut the dendrogram at approximately 1.6 to obtain 6 clusters. 
+
+In hierarchical clustering, a dendrogram was used to cluster players. Below is the dendrogram diagram. The x-axis consists of the players and y-axis consists of the Euclidean distance between the clusters.  While there are many distance measuring methods (e.g. single, complete, average, ward, etc.), we used average method to best match our pre-existing classes (see evaluation section for more details). As the dashed line indicates, we cut the dendrogram at approximately 1.6 to obtain 6 clusters. 
+
 <img src="https://www.dropbox.com/s/pt5izbut9wu2cps/dendorgram.png?raw=1">
-Below is the hierarchical clustering results. The most noticeable difference between K-means and GMM results is Cluster 2 (indicated as green color). While K-means and GMM separated Cluster 2 as two or more groups, hierarchical clustering clustered them as one group, which is similar to our pre-existing categorization of seasoned players. 
+
+Below is the hierarchical clustering results. The most noticeable difference between K-means/GMM and Hierarchical clustering is observed in Cluster 2 (indicated as green color). While K-means and GMM separated Cluster 2 as two or more groups, hierarchical clustering clustered them as one group, which is similar to our pre-existing categorization of seasoned players. 
+
 <img src="https://www.dropbox.com/s/q84eajgf564u931/hierarhical_revised.png?raw=1">
-Trae Young can potentially belong to three different groups: Cluster 0 (blue), Cluster 1 (yellow) and Cluster 2 (green). Young will most likely belong to Cluster 0 or Cluster 1. 
+
+Trae Young can potentially belong to three different groups: Cluster 0 (blue), Cluster 1 (yellow) and Cluster 2 (green). Young will most likely belong to Cluster 0 or Cluster 1.
+
 #### Evaluation of clustering methods
 Lastly, considering we created 6 clustering groups explicitly for seasoned players, we can measure performance using adjusted_rand_score. This is not frequent since in real cases we don’t have cluster labels or ground truth to begin with (thus our need to apply clustering techniques). Since in this case we do have labels, we can measure performance. 
 - K-means:0.29
