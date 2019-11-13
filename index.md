@@ -100,19 +100,19 @@ This plot shows that Trae Young (who ironically the Atlanta Hawks traded for by 
 
 #### DBSCAN
 
-DBSCAN algorithm resulted in six clusterings, as shown below with center players, and many players were regarded as noises. Unlike other clustering algorithms, DBSCAN does not require to specify the number of clusters a priori. The number of groups depends on the value of eps and minpts. After adjusting the values of eps and minpts, six clusters were identified; increasing eps and minpts resulted in one big group while considering other points as noise. DBSCAN can also identify points that are not part of any cluster, which is very useful for detecting outliers (indicated as cluster -1). For example, data points in the upper right corner are spread and not dense enough to be clustered. Some exceptional players who are unique may not belong to any clusters. 
+Unlike other clustering algorithms, DBSCAN does not require to specify the number of clusters a priori. The number of groups depends on the value of eps and minpts. After adjusting the values of eps and minpts, six clusters were identified. The white labels show players who were closest to the center of their clusters. The black dots represent players who are regarded as outliers (indicated as cluster -1). For example, data points in the upper right corner are spread out and are not dense enough to be clustered. There are many exceptional players who are located in this region of the graph. 
 
-If Trae Young plays 10+ seasons, he would fall under Cluster 1 (yellow) or Cluster 5 (red), or he would be located in a region where there is currently in noise points. This is where players with great rookie season and careers lie. 
+If Trae Young plays 10+ seasons, he could fall under Cluster 1 (yellow), Cluster 5 (red), or become a noise point. 
 
 <img src="https://www.dropbox.com/s/n8upzu2t7az06lf/dbscan_revised.png?raw=1">
 
 #### Hierarchical
 
-In hierarchical clustering, the dendrogram was used to find the optimal number of clusters. Below is the dendrogram diagram. The x-axis consists of the players and y-axis consists of the Euclidean distance between the clusters.  While there are many distance measuring methods (e.g. single, complete, average, ward, etc.), we used average method to best match our pre-existing classes (see evaluation section for more details). As the dashed line indicates, we cut the dendrogram at approximately 1.6 to obtain 6 clusters. 
+In hierarchical clustering, a dendrogram was used to cluster players. Below is the dendrogram diagram. The x-axis consists of the players and y-axis consists of the Euclidean distance between the clusters.  While there are many distance measuring methods (e.g. single, complete, average, ward, etc.), we used average method to best match our pre-existing classes (see evaluation section for more details). As the dashed line indicates, we cut the dendrogram at approximately 1.6 to obtain 6 clusters. 
 
 <img src="https://www.dropbox.com/s/pt5izbut9wu2cps/dendorgram.png?raw=1">
 
-Below is the hierarchical clustering results. The most noticeable difference between K-means and GMM results is Cluster 2 (indicated as green color). While K-means and GMM separated Cluster 2 as two or more groups, hierarchical clustering clustered them as one group, which is similar to our pre-existing categorization of seasoned players. 
+Below is the hierarchical clustering results. The most noticeable difference between K-means/GMM and Hierarchical clustering is observed in Cluster 2 (indicated as green color). While K-means and GMM separated Cluster 2 as two or more groups, hierarchical clustering clustered them as one group, which is similar to our pre-existing categorization of seasoned players. 
 
 <img src="https://www.dropbox.com/s/q84eajgf564u931/hierarhical_revised.png?raw=1">
 
@@ -154,23 +154,21 @@ In another approach, we trained various models with the LDA components. In this 
 
 #### Evaluation of approach
 
-The RMSE, R-squared, and Mean Absolute Error values were used to compare the performance of different models.
+The RMSE, R-squared and Mean Absolute Error values were used to compare the performance of different models.
 
-### Results and insights
+#### Results and insights
 #### Model Training with LDA components
 In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
-#### Model Training using Rookie Features
 Win_Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
 <img src='https://www.dropbox.com/s/xap7znyujl70hny/Screen%20Shot%202019-11-13%20at%202.33.38%20PM.png?raw=1' width="500">
 
 Our experiments include regularizing linear regression algorithm with ridge(l2), lasso (l1) and elastic net techniques. 
 Any sports data will have extreme stats. To handle such outliers in the player stats we have also experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
 
-The below chart compares various techniques in linear regression. We have used RMSE, MAE, R_squared for evaluating the models. 
-
+The below chart compares various techniques in linear regression. We have used RMSE, MAE for evaluating the models. 
 <img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1" width="500">
 
 
@@ -178,7 +176,8 @@ The below chart compares various techniques in linear regression. We have used R
 To further improve the model, we have trained a RandomForest Regressor with hyperparameter tuning using k-fold cross validation technique. Below chart shows the important features in the Random Forest model. 
 <img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1" width="500">
 
-We have also trained boosting algorithms, the gradient boosted tree regressor. This gives similar performance compared to other models explored. Below chart compares various models. 
+We have also trained boosting algorithms, the gradient boosted tree regressor gives the best results out of all the models. Below chart compares various models. 
+
  
  <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="500">
 
@@ -187,7 +186,7 @@ We have also trained boosting algorithms, the gradient boosted tree regressor. T
 Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career Winshares were predicted using rookie features via linear regression. Then their prediction was matched with a career winshare of players who have played 10 or more years in the NBA. If there were multiple matches, player in roughly the same position was picked (i.e. guard to guard). For Ben Simmons, Kevin Love as well as Amare Stoudemire were a match as it was interesting to see two "big mans" that Ben Simmons can potentially become.
 
 ### Conclusion
-For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest regressor, and gradient boosting, all provide similar performance. The top three important features from linear regression are rookie career winshare followed by rookie offensive box plus minus and rookie age. In addition, dimensionality reduction was done using LDA and its outputs were used as inputs for various models. However, this did not improve performance.
+For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest, and gradient boosting, all provide similar performance. The top three important features from linear regression are rookie career winshare followed by rookie offensive box plus minus and rookie age.
 
 ### Appendix
 #### Glossary of features
