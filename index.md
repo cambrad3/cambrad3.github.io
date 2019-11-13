@@ -141,7 +141,7 @@ While the ARI score does not determine the best clustering algorithm, it gives t
 
 ### Supervised
 
-#### Approach details
+#### Exploratory data analysis
 
 Before further discussing the project, we used basic EDA to see what our data could tell us. First, we looked at the distribution of rookie win shares:
 
@@ -161,13 +161,13 @@ We have calculated the correlation of all the attributes with the career win sha
 
 ### Modeling and Insights
 
-#### Model Training with LDA components
+#### Model training with LDA components
 
-In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
+For our first approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
-#### Model Training using Rookie Features
+#### Model training using rookie features
 
 Win_Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
 
@@ -188,7 +188,7 @@ We have also trained boosting algorithms, the gradient boosted tree regressor. T
  
  <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="500">
  
-#### Prediction on Rookies
+#### Career win share per season prediction for rookies
 
 <img src = "https://www.dropbox.com/s/k02cn0ys7h16wms/top_rookies_table3.PNG?raw=1">
 
