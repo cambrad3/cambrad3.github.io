@@ -206,7 +206,9 @@ Above is an image of top rookies from 2017-2018 season and 2018-2019 season, inc
 
 ### Conclusion
 
-For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest regressor, and gradient boosting, all provide similar performance. The top three important features from linear regression are rookie career winshare followed by rookie offensive box plus minus and rookie age. In addition, dimensionality reduction was done using LDA and its outputs were used as inputs for various models. However, this did not improve performance.
+For unsupervised learning, hierarhical clustering provides the best performance relative to actual labels. Clustering using LDA components gave us the ability to compare 2018 rookies to seasoned NBA players.
+
+For supervised learning, three models that were explored, linear regression, random forest regression, and gradient boosting, all provide similar performance. Linear regression shows that the top three important features in predicting career win share per season are rookie career winshare, rookie offensive box plus minus, and rookie age. In addition, dimensionality reduction was done using LDA and its outputs were used as inputs for various models. However, this did not improve predictive performance.
 
 ### Appendix
 
@@ -250,3 +252,4 @@ For unsupervised learning, hierarhical clustering provides the best performance.
 - DBSCAN and Hierarchical: Sungeun An
 - Clustering Evaluations: Sungeun An
 - GitHub page contributer: Cameron Bradley, Sungeun An, Nazanin Tabatabaei, Kevin Cho, Kalyan Murahari
+- GitHub page editor: Cameron Bradley
