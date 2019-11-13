@@ -143,11 +143,11 @@ While the ARI score does not determine the best clustering algorithm, it gives t
 
 #### Approach details
 
-Before further discussing the project, we used basic EDA to see what our data can tell us. First, we took a quick look at the distribution of rookie win shares:
+Before further discussing the project, we used basic EDA to see what our data could tell us. First, we looked at the distribution of rookie win shares:
 
 <img src="https://www.dropbox.com/s/t9rrhl1en6c98aw/rookie.PNG?raw=1">
 
-Again, we used basic EDA to see what our data can tell us:
+Next, we looked at career win shares:
 
 <img src="https://www.dropbox.com/s/i2y8u7ndwolg919/carrer.PNG?raw=1">
 
