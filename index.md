@@ -132,15 +132,9 @@ While the ARI score does not determine the best clustering algorithm, it gives t
 
 ### Supervised
 #### Approach details
-Nazanin, Kevin, Kalyan
-
-•	What does the distribution of rookie winshares look like?
-
 Before further discussing the project, we used basic EDA to see what our data can tell us. First, we took a quick look at the distribution of rookie win shares:
 
 <img src="https://www.dropbox.com/s/t9rrhl1en6c98aw/rookie.PNG?raw=1">
-
-•	What does the distribution of Career winshares look like?
 
 Again, we used basic EDA to see what our data can tell us:
 
@@ -152,10 +146,8 @@ Furthermore, by comparing the 2 charts, we realize that the range of career wins
 
 We have calculated the correlation of all the attributes with the WinShares. This plot shows the attributes that are highly correlated with the WinShares.
 <img src="https://www.dropbox.com/s/reiwgr5vha7i6af/Screen%20Shot%202019-11-11%20at%209.02.13%20PM.png?raw=1">
-The selected features were used by different models. we performed linear regression on the selected features.
 
-
-###### Model Training with LDA components
+#### Model Training with LDA components
 In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
@@ -164,10 +156,11 @@ In another approach, we trained various models with the LDA components. In this 
 
 The RMSE, R-squared and Mean Absolute Error values were used to compare the performance of different models.
 
-<img src = "https://www.dropbox.com/s/k02cn0ys7h16wms/top_rookies_table3.PNG?raw=1">
-Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career Winshares were predicted using rookie features via linear regression. Then their prediction was matched with a career winshare of players who have played 10 or more years in the NBA. If there were multiple matches, player in roughly the same position was picked (i.e. guard to guard). For Ben Simmons, Kevin Love as well as Amare Stoudemire were a match as it was interesting to see two "big mans" that Ben Simmons can potentially become.
-
 #### Results and insights
+#### Model Training with LDA components
+In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
+
+<img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
 Win_Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
 <img src='https://www.dropbox.com/s/xap7znyujl70hny/Screen%20Shot%202019-11-13%20at%202.33.38%20PM.png?raw=1' width="500">
@@ -187,6 +180,10 @@ We have also trained boosting algorithms, the gradient boosted tree regressor gi
 
  
  <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="500">
+
+#### Prediction on Rookies
+<img src = "https://www.dropbox.com/s/k02cn0ys7h16wms/top_rookies_table3.PNG?raw=1">
+Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career Winshares were predicted using rookie features via linear regression. Then their prediction was matched with a career winshare of players who have played 10 or more years in the NBA. If there were multiple matches, player in roughly the same position was picked (i.e. guard to guard). For Ben Simmons, Kevin Love as well as Amare Stoudemire were a match as it was interesting to see two "big mans" that Ben Simmons can potentially become.
 
 ### Conclusion
 For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest, and gradient boosting, all provide similar performance. The top three important features from linear regression are rookie career winshare followed by rookie offensive box plus minus and rookie age.
