@@ -137,7 +137,7 @@ Since we know the 6 labels of our seasoned players, we evaluted our clustering u
 - DBSCAN:0.34
 - Hierarchical:0.40 
 
-While the ARI score does not determine the best clustering algorithm, it gives the similarity value between two clustering indices. As indicated in the above table, the clusterings using hierarchical method are the most similar to the original clustering groups. The visual comparison between the hierarchical clustering result and the 6 classes of seasoned players allows us to identify two major groups: Cluster 1 (yellow) and Cluster 2 (green) that worth further investigation.
+While the ARI score does not determine the best clustering algorithm, it gives the similarity value between two clustering indices. As indicated in the above table, the clusterings using hierarchical method are the most similar to the original clustering groups. The visual comparison between the hierarchical clustering result and the 6 classes of seasoned players allows us to identify two major groups: Cluster 1 (yellow) and Cluster 2 (green).
 
 ### Supervised
 
