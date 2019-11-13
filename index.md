@@ -156,12 +156,13 @@ In another approach, we trained various models with the LDA components. In this 
 
 The RMSE, R-squared and Mean Absolute Error values were used to compare the performance of different models.
 
-#### Results and insights
+### Results and insights
 #### Model Training with LDA components
 In another approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career winshares.
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
+#### Model Training using Rookie Features
 Win_Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
 <img src='https://www.dropbox.com/s/xap7znyujl70hny/Screen%20Shot%202019-11-13%20at%202.33.38%20PM.png?raw=1' width="500">
 
@@ -176,8 +177,7 @@ The below chart compares various techniques in linear regression. We have used R
 To further improve the model, we have trained a RandomForest Regressor with hyperparameter tuning using k-fold cross validation technique. Below chart shows the important features in the Random Forest model. 
 <img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1" width="500">
 
-We have also trained boosting algorithms, the gradient boosted tree regressor gives the best results out of all the models. Below chart compares various models. 
-
+We have also trained boosting algorithms, the gradient boosted tree regressor. This gives similar performance compared to other models explored. Below chart compares various models. 
  
  <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="500">
 
@@ -186,7 +186,7 @@ We have also trained boosting algorithms, the gradient boosted tree regressor gi
 Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career Winshares were predicted using rookie features via linear regression. Then their prediction was matched with a career winshare of players who have played 10 or more years in the NBA. If there were multiple matches, player in roughly the same position was picked (i.e. guard to guard). For Ben Simmons, Kevin Love as well as Amare Stoudemire were a match as it was interesting to see two "big mans" that Ben Simmons can potentially become.
 
 ### Conclusion
-For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest, and gradient boosting, all provide similar performance. The top three important features from linear regression are rookie career winshare followed by rookie offensive box plus minus and rookie age.
+For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest regressor, and gradient boosting, all provide similar performance. The top three important features from linear regression are rookie career winshare followed by rookie offensive box plus minus and rookie age. In addition, dimensionality reduction was done using LDA and its outputs were used as inputs for various models. However, this did not improve performance.
 
 ### Appendix
 #### Glossary of features
