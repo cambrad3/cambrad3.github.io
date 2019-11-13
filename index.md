@@ -178,19 +178,9 @@ In another approach, we trained various models with the LDA components. In this 
 Nazanin, Kevin, Kalyan
 
 The RMSE, R-squared and Mean Absolute Error values were used to compare the performance of different models.
-->RMSE and R-squared comparison goes here
-
-
-
-
-After analysis and comparison between different models, we picked the best model for further analysis on players. In this approach We picked 10 players and predicted their corresponding career winshares, using their rookie features for the selected model. Furthermore, we used these predicted winshares, and predicted which player in our current dataset they will most likely have the closest winshares to, in their future career.-> I need to revise this sentence.
-
-
-
-->10 players comparison table will go here.
 
 <img src = "https://www.dropbox.com/s/k02cn0ys7h16wms/top_rookies_table3.PNG?raw=1">
-Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career Winshares were predicted using linear regression (should I say lin reg?). Then their prediction was matched with a career winshare of players who have played 10 or more years in the NBA. If there were multiple matches, I picked player in roughly the same position (i.e. guard to guard). For Ben Simmons, I put both Kevin Love and Amare Stoudemire as I believed it was interesting to see two "big mans" that Ben Simmons can potentially become.
+Abvoe is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career Winshares were predicted using rookie features via linear regression. Then their prediction was matched with a career winshare of players who have played 10 or more years in the NBA. If there were multiple matches, player in roughly the same position was picked (i.e. guard to guard). For Ben Simmons, Kevin Love as well as Amare Stoudemire were a match as it was interesting to see two "big mans" that Ben Simmons can potentially become.
 
 #### Results and insights
 
@@ -216,7 +206,7 @@ We have also trained boosting algorithms, the random forest regressor gives the 
 Nazanin, Kevin, Kalyan
 
 ### Conclusion
-Sung or Nazanin or Kevin or Kalyan
+For unsupervised learning, hierarhical clustering provides the best performance. For supervised learning, three models that were explored, linear regression, random forest, and gradient boosting, all provide similar performance. The top three important features, in order of importance, are rookie career winshare followed by rookie offensive box plus minus and rookie age.
 
 ### Appendix
 #### Glossary of features
@@ -249,11 +239,12 @@ Sung or Nazanin or Kevin or Kalyan
 #### Distribution of work
 - Data scrapping and cleaning: Cameron Bradley
 - Unsupervised feature engineering: Cameron Bradley
-- Supervised feature engineering : Kalyan Murahari
-- Linear Regression and Regularization : Kalyan Murahari
-- Some Exploratory Data Analysis:Nazanin Tabatabaei
-- Using LDA for Different models such as Linear,ridge,lasso,elasticNet and huber regression:Nazanin Tabatabaei
+- Supervised feature engineering: Kalyan Murahari, Kevin Cho
+- Linear Regression and Regularization: Kalyan Murahari, Kevin Cho
+- Exploratory Data Analysis: Nazanin Tabatabaei, Kalyan Murahari, Kevin Cho
+- LDA for Different models:Nazanin Tabatabaei
+- Rookie Prediction Match: Kevin Cho
 - Kmeans and GMM: Cameron Bradley
 - DBSCAN and Hierarchical: Sungeun An
 - Clustering Evaluations: Sungeun An
-- GitHub page contributer: Cameron Bradley, Sungeun An, Nazanin Tabatabaei
+- GitHub page contributer: Cameron Bradley, Sungeun An, Nazanin Tabatabaei, Kevin Cho, Kalyan Murahari
