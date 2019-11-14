@@ -163,7 +163,7 @@ We have calculated the correlation of all the attributes with the career win sha
 
 #### Model training with LDA components
 
-For our first approach, we trained various models with the LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used these 2 LDA components and cross validated different models, using k-fold cross validation on non-rookie players and their corresponding career win shares.
+For our first approach, we trained various models using LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used took the first 2 LDA components and used them in various models. We looked at the accuracy of each model using 5-fold cross validation on non-rookie players and their corresponding career win shares. The following table shows these results:
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
