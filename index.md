@@ -176,7 +176,7 @@ Win shares is a continuous variable; we used linear regression to predict career
 Our experiments include regularizing linear regression algorithm with ridge(L2 norm), lasso (L1 norm) and elastic net techniques. 
 There are outlier values in our data. To handle such outliers in the player stats we experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
 
-The below chart compares various techniques in linear regression. We used RMSE, MAE, R_squared for evaluating the models. 
+The below chart compares various techniques in linear regression. We used RMSE, MAE, R-squared for evaluating the models. 
 
 <img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1" width="500">
 
@@ -184,15 +184,17 @@ To further improve the model, we trained a random forest regressor with hyperpar
 
 <img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1" width="500">
 
-We have also trained boosting algorithms, the gradient boosted tree regressor. This gives similar performance compared to other models explored. Below chart compares various models. 
+We also trained boosting algorithms, such as the gradient boosted tree regressor. This gives similar performance compared to other models explored. Below chart compares various models. 
  
  <img src="https://www.dropbox.com/s/uhtaj2o945p1vpq/Screen%20Shot%202019-11-13%20at%202.34.30%20PM.png?raw=1" width="500">
+ 
+Many of these models were comparable in predictive performance. **Gradient boosted regression** gave the best **RMSE at 1.39**, while **Huber regression gave the best MAE at .99**.
  
 #### Career win share per season prediction for rookies
 
 <img src = "https://www.dropbox.com/s/k02cn0ys7h16wms/top_rookies_table3.PNG?raw=1">
 
-Above is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career win shares were predicted using rookie features via linear regression. Then their prediction was matched with a career win share of players who have played 10 or more years in the NBA. If there were multiple matches, player in roughly the same position was picked (i.e. guard to guard). For Ben Simmons, Kevin Love as well as Amare Stoudemire were a match as it was interesting to see two "big mans" that Ben Simmons can potentially become.
+Above is an image of top rookies from 2017-2018 season and 2018-2019 season, including Atlanta Hawk's Trae Young. These rookies' career win shares per season were predicted using rookie features via linear regression. Then, their prediction was matched with a career win shares per season of players who have played 10 or more years in the NBA. If there were multiple matches, a player in roughly the same position was picked (i.e. guard to guard). For **Ben Simmons**, **Kevin Love** as well as **Amare Stoudemire** were matches. It was interesting to see that Ben Simmons was comparable to these two "big men".
 
 ### Conclusion
 
