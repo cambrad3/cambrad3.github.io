@@ -161,7 +161,7 @@ Furthermore, by comparing the 2 charts, we realize that the range of career win 
 
 We have calculated the correlation of all the attributes with the career win shares. This plot shows the attributes that are highly correlated with this metric.
 
-<img src="https://www.dropbox.com/s/reiwgr5vha7i6af/Screen%20Shot%202019-11-11%20at%209.02.13%20PM.png?raw=1">
+<img src="https://www.dropbox.com/s/ct4stbk4j97fx7s/Screen%20Shot%202019-11-14%20at%2011.19.41%20AM.png?raw=1">
 
 ### Modeling and Insights
 
