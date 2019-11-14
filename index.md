@@ -169,18 +169,18 @@ For our first approach, we trained various models using the LDA components obtai
 
 #### Regression and regularization models using rookie features
 
-Win Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
+Win shares is a continuous variable; we used linear regression to predict career win shares per season. We also scaled the attributes, as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
 
 <img src='https://www.dropbox.com/s/xap7znyujl70hny/Screen%20Shot%202019-11-13%20at%202.33.38%20PM.png?raw=1' width="500">
 
-Our experiments include regularizing linear regression algorithm with ridge(l2), lasso (l1) and elastic net techniques. 
-Any sports data will have extreme stats. To handle such outliers in the player stats we have also experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
+Our experiments include regularizing linear regression algorithm with ridge(L2 norm), lasso (L1 norm) and elastic net techniques. 
+There are outlier values in our data. To handle such outliers in the player stats we experimented with Huber loss in linear regression. This model handles outliers well by minimizing the contribution of outliers to the loss function. 
 
-The below chart compares various techniques in linear regression. We have used RMSE, MAE, R_squared for evaluating the models. 
+The below chart compares various techniques in linear regression. We used RMSE, MAE, R_squared for evaluating the models. 
 
 <img src="https://www.dropbox.com/s/niahlwdhdve3j0t/Screen%20Shot%202019-11-13%20at%202.51.55%20PM.png?raw=1" width="500">
 
-To further improve the model, we have trained a RandomForest Regressor with hyperparameter tuning using k-fold cross validation technique. Below chart shows the important features in the Random Forest model. 
+To further improve the model, we trained a random forest regressor with hyperparameter tuning using 5-fold cross validation technique. The chart below shows the important features in the random forest model. 
 
 <img src= "https://www.dropbox.com/s/sydi270fof3uagz/Screen%20Shot%202019-11-13%20at%202.33.49%20PM.png?raw=1" width="500">
 
