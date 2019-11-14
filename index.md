@@ -243,6 +243,7 @@ For supervised learning, three models that were explored, linear regression, ran
 - Linear regression and regularization: Kalyan Murahari, Kevin Cho
 - Exploratory data analysis: Nazanin Tabatabaei, Kalyan Murahari, Kevin Cho
 - LDA for supervised models:Nazanin Tabatabaei
+- Random Forest, Gradient Boosting: Kalyan Murahari
 - Rookie prediction match: Kevin Cho
 - Kmeans and GMM: Cameron Bradley
 - DBSCAN and Hierarchical: Sungeun An
