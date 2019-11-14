@@ -43,6 +43,8 @@ We used supervised learning to predict the career win shares of a player by usin
 
 Using LDA to create new features that reduced the dimensions of the rookie and career features into single metrics, and then using these metrics to predict career performance is novel in our approach.
 
+We also used Huber regression, elastic net, and gradient boosting to predict career win shares per season. In our research, we did not see anyone use these approaches to predict a rookie's career outlook.
+
 ### Unsupervised
 
 #### Creating new features
@@ -130,12 +132,14 @@ Trae Young can potentially belong to three different groups: Cluster 0 (blue), C
 
 #### Evaluation of clustering methods
 
-Since we know the 6 labels of our seasoned players, we evaluated our clustering using Adjusted Rand Index score. The score values for each clustering technique are the following:
+Since we know the 6 labels of our seasoned players, we evaluated our clustering using Adjusted Rand Index (ARI) score. The score values for each clustering technique are the following:
 
 - K-means:0.29
 - GMM:0.34
 - DBSCAN:0.34
 - Hierarchical:0.40 
+
+The ARI is calculated by the number of pairs of components that are either in the same group or in different groups divided by the total number of pairs of components. The maximum value 1 and the minimum value 0. A higher value of adjusted ARI means a higher match between two groups. The ARI can also measure agreement between two different cluster groups even though they have different indices of clusters.
 
 While the ARI score does not determine the best clustering algorithm, it gives the similarity value between two clustering indices. As indicated in the above table, the clusterings using hierarchical method are the most similar to the original clustering groups. The visual comparison between the hierarchical clustering result and the 6 classes of seasoned players allows us to identify two major groups: Cluster 1 (yellow) and Cluster 2 (green).
 
@@ -200,7 +204,7 @@ Above is an image of top rookies from 2017-2018 season and 2018-2019 season, inc
 
 For unsupervised learning, hierarchical clustering provides the best performance relative to actual labels. Clustering using LDA components gave us the ability to compare 2018 rookies to seasoned NBA players.
 
-For supervised learning, three models that were explored, linear regression, random forest regression, and gradient boosting, all provide similar performance. Linear regression shows that the top three important features in predicting career win share per season are rookie career win share, rookie offensive box plus minus, and rookie age. In addition, dimensionality reduction was done using LDA and its outputs were used as inputs for various models. However, this did not improve predictive performance.
+For supervised learning, three models that were explored, linear regression, random forest regression, and gradient boosting. All provide similar performance, but gradient boosting and Huber regression gave the best results. Linear regression shows that the top three most important features in predicting career win shares per season are rookie career win shares, rookie offensive box plus minus, and rookie age. In addition, dimensionality reduction was done using LDA and its outputs were used as inputs for various models. However, this did not improve predictive performance.
 
 ### Appendix
 
