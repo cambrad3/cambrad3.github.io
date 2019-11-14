@@ -161,13 +161,13 @@ We have calculated the correlation of all the attributes with the career win sha
 
 ### Modeling and Insights
 
-#### Model training with LDA components
+#### Regression using LDA components
 
-For our first approach, we trained various models using LDA components. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used took the first 2 LDA components and used them in various models. We looked at the accuracy of each model using 5-fold cross validation on non-rookie players and their corresponding career win shares. The following table shows these results:
+For our first approach, we trained various models using the LDA components obtained from the unsupervised analysis. In this approach, we used LDA on rookie features of all non-rookie players. Then, we used took the first 2 LDA components and used them in various models. We looked at the accuracy of each model using 5-fold cross validation on non-rookie players and their corresponding career win shares. The following table shows these results:
 
 <img src="https://www.dropbox.com/s/9am5ikrhp566jrf/finalLDA.PNG?raw=1">
 
-#### Model training using rookie features
+#### Regression and regularization models using rookie features
 
 Win Shares is a continuous variable; we have used linear regression to predict the value. We have also scaled the attributes as few values have different quantities which would impact the linear regression algorithm.  Below is a chart of important attributes using linear regression. This chart shows the strength of coefficients of each predictor. 
 
