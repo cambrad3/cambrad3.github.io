@@ -248,4 +248,4 @@ For supervised learning, three models that were explored, linear regression, ran
 - DBSCAN and Hierarchical: Sungeun An
 - Clustering evaluations: Sungeun An
 - GitHub page contributer: Cameron Bradley, Sungeun An, Nazanin Tabatabaei, Kevin Cho, Kalyan Murahari
-- GitHub page editor: Cameron Bradley
+- GitHub page editor: Cameron Bradley, Nazanin Tabatabaei
